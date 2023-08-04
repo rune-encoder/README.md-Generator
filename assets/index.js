@@ -1,50 +1,53 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
+const generateMarkdown = require('./utils/generateMarkdown.js')
+const renderLicenseBadge = require('./utils/generateMarkdown.js')
+
 
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
       {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'Title: What is the title of your project?',
       },
       {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Description: Write a description about your project.',
       },
       {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Installation: How is your project installed. Are there any requirements?',
       },
       {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Usage: How do you use or operate or project?',
       },
       {
         type: 'input',
-        name: 'Contribution',
+        name: 'contribution',
         message: 'Contribution: How may a user contribute to your project?',
       },
       {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'Test: What applications are needed to test your project?',
       },
       {
-        type: 'rawlist',
-        name: 'License',
+        type: 'list',
+        name: 'license',
         message: 'What license does your project use?',
         choices: [
-            "N/A",
-            "MIT License",
-            "Academic Free License v3.0",
-            "Apache license 2.0",
-            "Artistic license 2.0",
+            "CC0",
+            "CC0",
+            "CC0",
+            "CC0",
+            "CC0",
           ], 
       },
       {
@@ -56,13 +59,15 @@ const questions = () => {
   };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
 const init = () => {
     questions()
-    .then((response) => console.log(response));
-
+    // .then((response) => renderLicenseBadge(response.license))
+    // .then((response) => console.log(response))
+    .then((response) => generateMarkdown(response));
+    // .then((response) => writeFile('README.md', generateMarkdown(response)))
+    // .then(() => console.log('You have successfully created README.md'))
+    // .catch((err) => console.log(err));
 };
 
 // Function call to initialize app
