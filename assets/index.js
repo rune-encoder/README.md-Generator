@@ -2,8 +2,7 @@
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 const generateMarkdown = require('./utils/generateMarkdown.js')
-const renderLicenseBadge = require('./utils/generateMarkdown.js')
-
+const generateLicense = require('./utils/generateLicenseList.js')
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -47,13 +46,7 @@ const questions = () => {
         type: 'list',
         name: 'license',
         message: 'What license does your project use?',
-        choices: [
-            "CC0",
-            "CC0",
-            "CC0",
-            "CC0",
-            "CC0",
-          ], 
+        choices: generateLicense.prototype.licenseList, 
       },
       {
         type: 'input',
@@ -71,13 +64,12 @@ const questions = () => {
 // TODO: Create a function to write README file
 // TODO: Create a function to initialize app
 const init = () => {
+    generateLicense()
     questions()
-    // .then((response) => renderLicenseBadge(response.license))
-    // .then((response) => console.log(response))
-    .then((response) => generateMarkdown(response));
-    // .then((response) => writeFile('README.md', generateMarkdown(response)))
-    // .then(() => console.log('You have successfully created README.md'))
-    // .catch((err) => console.log(err));
+    .then((response) => generateMarkdown(response))
+    .then(() => writeFile('README.md', generateMarkdown.prototype.readme))
+    .then(() => console.log('You have successfully created README.md'))
+    .catch((err) => console.log(err));
 };
 
 // Function call to initialize app

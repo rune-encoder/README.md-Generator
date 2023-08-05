@@ -1,9 +1,8 @@
 const generateBadge = require('./generateBadge')
 
-const generateREADME = ({ title, description, installation, usage, contribution, tests, credits, license, github, email }) =>
-console.log(
+const generateReadme = ({ title, description, installation, usage, contribution, tests, credits, license, github, email }) =>
     
- `# ${title} ${generateBadge.prototype.chosenBadge}
+ `# ${title} ${generateBadge.prototype.chosenBadge} 
 
  ## Description
  
@@ -40,14 +39,18 @@ console.log(
  
  ## License
 
- ${license}
+ ${generateBadge.prototype.chosenBadge}  
+ **${license}**  
+ Please refer to the LICENSE in the repository.
 
  ## Questions
  
- If you have any questions you may reach me at my email: [${email}](mailto:${email})
- Here is a link to my Github Profile: [Profile for ${github}](https://github.com/${github})
- If you would like to check out other projects of mine here is a link: [Projects from ${github}](https://github.com/${github}?tab=repositories)
+ **If you have any questions you may reach me at my email: [${email}](mailto:${email})**  
+
+ **Here is a link to my Github Profile: [Profile Link: ${github}](https://github.com/${github})**  
+
+ **If you would like to check out my other projects visit this link: [Projects Link: ${github}](https://github.com/${github}?tab=repositories)**  
     
-`
-);
-module.exports = generateREADME;
+`;
+
+module.exports = generateReadme;
