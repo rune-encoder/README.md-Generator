@@ -1,8 +1,20 @@
-const generateBadge = require('./generateBadge')
+// Loads modules from generateBadge.js. We will need the license badge to append to our README.md.
+const generateBadge = require("./generateBadge");
 
-const generateReadme = ({ title, description, installation, usage, contribution, tests, credits, license, github, email }) =>
-    
- `# ${title} ${generateBadge.prototype.chosenBadge} 
+// Generates markdown text that will be used in our README.md file.
+const generateReadme = ({
+  title,
+  description,
+  installation,
+  usage,
+  contribution,
+  tests,
+  credits,
+  license,
+  github,
+  email,
+}) =>
+  `# ${title} ${generateBadge.prototype.chosenBadge} 
 
  ## Description
  
