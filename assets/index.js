@@ -39,6 +39,11 @@ const questions = () => {
         message: 'Test: What applications are needed to test your project?',
       },
       {
+        type: 'input',
+        name: 'credits',
+        message: 'Anything to credit for helping build the project that you would like to include?',
+      },
+      {
         type: 'list',
         name: 'license',
         message: 'What license does your project use?',
@@ -52,8 +57,13 @@ const questions = () => {
       },
       {
         type: 'input',
-        name: 'Github',
+        name: 'github',
         message: 'What is your Github Username?',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
       }
     ]);
   };
