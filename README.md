@@ -34,6 +34,7 @@ Click on the Video Link to view Tutorial:  [Youtube Video Link](https://www.yout
  Once questions have been answered the README.md will be generated.    
  
  ## Contributing
+ Created by: Christian Palacios  
  
  To contribute to this repository you may contact me for further details.  
  Contact details below in the Questions Section.
@@ -44,8 +45,11 @@ Click on the Video Link to view Tutorial:  [Youtube Video Link](https://www.yout
  
  ## Credits
  
- N/A
+ This link has a list of Licenses, URL's, and Badges.
+ Link: [Link: Licenses, URL's and Badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
  
+ This was usful in aiding me in creating an object module from scratch (in badgeList.js) that we can parse through to obtain the license the user chose and their respective badges and URL's.
+
  ## License
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
