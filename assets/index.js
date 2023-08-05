@@ -16,63 +16,62 @@ const questions = () => {
     {
       type: "input",
       name: "title",
-      message: "Title: What is the title of your project?",
+      message: `\x1b[32mTitle: What is the title of your project?\x1b[0m`,
     },
     // Description
     {
       type: "input",
       name: "description",
-      message: "Description: Write a description about your project.",
+      message: `\x1b[32mDescription: Write a description about your project.\x1b[0m`,
     },
     // Installation
     {
       type: "input",
       name: "installation",
-      message:
-        "Installation: How is your project installed. Are there any requirements?",
+      message: `\x1b[32mInstallation: How is your project installed. Are there any requirements?\x1b[0m`,
     },
     // Usage
     {
       type: "input",
       name: "usage",
-      message: "Usage: How do you use or operate or project?",
+      message: `\x1b[32mUsage: How do you use or operate or project?\x1b[0m`,
     },
     // Contribution
     {
       type: "input",
       name: "contribution",
-      message: "Contribution: How may a user contribute to your project?",
+      message: `\x1b[32mContribution: How may a user contribute to your project?\x1b[0m`,
     },
     // Tests
     {
       type: "input",
       name: "tests",
-      message: "Test: What applications are needed to test your project?",
+      message: `\x1b[32mTest: What applications are needed to test your project?\x1b[0m`,
     },
     // Credits
     {
       type: "input",
       name: "credits",
-      message: "Any credits?",
+      message: `\x1b[32mAny credits to your project?\x1b[0m`,
     },
     // Licenses (List rendered with generateLicenseList.js module).
     {
       type: "list",
       name: "license",
-      message: "What license does your project use?",
+      message: `\x1b[35mWhat license does your project use?\x1b[0m`,
       choices: generateLicense.prototype.licenseList,
     },
     // Github Username
     {
       type: "input",
       name: "github",
-      message: "What is your Github Username?",
+      message: `\x1b[33mWhat is your Github Username?\x1b[0m`,
     },
     // Email
     {
       type: "input",
       name: "email",
-      message: "What is your email?",
+      message: `\x1b[33mWhat is your email?\x1b[0m`,
     },
   ]);
 };
