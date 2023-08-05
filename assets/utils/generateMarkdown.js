@@ -6,8 +6,7 @@ const generateReadme = require('./generateReadme')
 
 function renderLicenseBadge(license) {
   generateBadge(license);
-  const chosenBadge = generateBadge.prototype.chosenBadge;
-  console.log(chosenBadge);
+  // const chosenBadge = generateBadge.prototype.chosenBadge;
 }
 
 // TODO: Create a function that returns the license link
@@ -21,8 +20,10 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseBadge(data.license);
-  // console.log(data);
-  // console.log(data.title);
+  generateReadme(data); 
+
+
+
   return `# ${data.title}
 
 `;
