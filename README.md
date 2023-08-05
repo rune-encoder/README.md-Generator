@@ -22,15 +22,27 @@ Click on the Video Link to view Tutorial:  [Youtube Video Link](https://www.yout
  ## Installation
  
  You will need to install:  
- 1. Node JS  
+ 1. node.js
  2. NPM  
  3. Inquirer 8.2.4  
  
  ## Usage
  
- Type `npm install -y` to install dependencies.  
- Run `node index.js` in the terminal.  
- Answer the questions displayed.  
+ 1. Type `npm install -y` to install dependencies.  
+ 2. Run `node index.js` in the terminal.  
+ 3. Answer the questions displayed.  
+ a. What is the title of your project?  
+ b. Write a description about your project.  
+ c. How is your project installed. Are there any requirements?  
+ d. How do you use or operate or project?  
+ e. How may a user contribute to your project?  
+ f. What applications are needed to test your project?  
+ g. Any credits to your project  
+ h. What license does your project use?  
+![License List](./assets/screenshot/license-list.gif.gif)  
+ i. What is your Github Username?  
+ j. What is your email?
+
  Once questions have been answered the README.md will be generated.    
  
  ## Contributing
