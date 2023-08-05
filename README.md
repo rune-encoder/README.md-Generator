@@ -46,7 +46,7 @@ Click on the Video Link to view Tutorial:  [Youtube Video Link](https://www.yout
  ## Credits
  
  This link has a list of Licenses, URL's, and Badges.
- Link: [Link: Licenses, URL's and Badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+ Link: [Licenses, URL's and Badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
  
  This was usful in aiding me in creating an object module from scratch (in badgeList.js) that we can parse through to obtain the license the user chose and their respective badges and URL's.
 
